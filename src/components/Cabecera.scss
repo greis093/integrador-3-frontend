@@ -1,0 +1,32 @@
+/* ----------------------------------------------- */
+/* HEADER                                          */
+/* ----------------------------------------------- */
+/* MOBILE FIRST */
+.main-header {
+    display: flex;
+    flex-direction: column-reverse;
+ 
+}
+
+#menu {
+    display: none;
+
+    /* Hacer funcionar el checkbox -> Hacer funcionar el menú hamburgüesa */
+    &:checked + .nav-bar {
+        display: block;
+    }
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors */
+    &:checked ~ .search-bar .menu-toogle .menu-toogle__label {
+        background-color: yellow;
+    }
+
+
+}
+#buscar{
+    display: none;
+    &:checked +.search_button {
+        display: block;
+    }
+}
+
+

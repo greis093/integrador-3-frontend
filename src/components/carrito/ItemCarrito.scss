@@ -1,0 +1,99 @@
+.celda_cantidad{
+    display: grid;
+    grid-template-rows: auto auto; // 🔹 Dos filas
+
+    &__superior{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 🔹 Tres columnas iguales
+        justify-items: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 900;
+    }
+
+    &__inferior{
+        text-align: center;
+        border-radius: 10px;
+        padding-top: 10px;
+        color: rgb(14, 13, 13);
+        font-size: 10px;
+    }
+    &__botones{
+        background-color: rgba(97, 103, 103, 0.478);
+        width: 18px;
+        border: none;
+        border-radius: 30%;
+        color: aliceblue;
+        font-size: 20px;
+        font-weight: 900; 
+        cursor: pointer;       
+    }
+    &__numero{
+        padding: 0px 3px 0px 3px;
+    }
+  
+   
+}
+.basurero{
+   
+    cursor: pointer;
+}
+
+@media screen and (min-width: 576px){
+    .celda_cantidad{
+    
+        &__superior{
+            font-size: 20px;
+            font-weight: 900;
+        }
+    
+        &__inferior{
+            font-size: 12px;
+        }
+        &__botones{
+            width: 20px;      
+        }
+            
+    }
+}
+@media screen and (min-width: 992px){
+    .celda_cantidad{
+    
+        &__superior{
+            font-size: 25px;
+            font-weight: 900;
+        }
+    
+        &__inferior{
+            font-size: 12px;
+        }
+        &__botones{
+            width: 20px;      
+        }     
+    }
+    .basurero{
+        font-size: 30px;
+    }
+    
+}
+@media screen and (min-width: 1200px){
+    .celda_cantidad{
+        &__superior{
+            font-size: 30px;
+            font-weight: 900;
+        }
+    
+        &__inferior{
+            font-size: 15px;
+        }
+        &__botones{
+            font-size: 20px;
+            font-weight: 900;   
+            width:25px;     
+        }
+ 
+}
+.basurero{
+    font-size: 35px;
+}
+}

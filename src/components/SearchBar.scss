@@ -1,0 +1,162 @@
+/* ----------------------------------------------- */
+/* SEARCH BAR                                          */
+/* ----------------------------------------------- */
+
+.search-bar {
+    display:flex;
+    background-color:#FF5757;
+    justify-content:space-around;
+    width: 100%;
+    align-items: center;
+
+    &__logo-container{
+        width:60vw;
+        text-align: center;
+    }
+    &__logo { /* .search-bar__logo-container */
+        height: auto;
+        width: auto;
+        object-fit: contain;
+        width:130px;
+    }
+    &__carrito-container {
+        /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */ 
+        cursor:pointer;
+        text-align: center; /* Centra horizontalmente */
+        align-self: center;/* Centra verticalmente */
+        color: white;
+        font-size: 30px; // Aumenta el tamaño 
+        padding-top: 9px;
+        margin-right: 15px;
+    }
+    /* TABLET ->  max 576px  */
+    @media screen and (min-width: 576px){
+    &__logo { /* .search-bar__logo-container */
+        
+            width:12rem;  
+        }
+    &__carrito-container {
+            font-size: 50px; // Aumenta el tamaño 
+    }
+    }
+    /* responsivo ->  max 992px  */
+    @media screen and (min-width: 992px){
+        &__carrito-container {
+            font-size: 50px; // Aumenta el tamaño 
+    }
+   }
+    /* DESKTOP ->  max 1200px  */
+    @media screen and (min-width: 1200px){
+    &__logo-container{
+            width:70vw; 
+    }
+    &__logo { /* .search-bar__logo-container */
+            width:15rem;  
+}
+   &__carrito-container {
+        font-size: 70px;
+    }
+}
+}
+ 
+/* ----------------------------------------------- */
+/* NUMERO CARRITO                                       */
+/* ----------------------------------------------- */
+
+.numero_carrito{
+    position:absolute;
+    top: 1%;
+    right: 2%;
+    background-color: rgb(132, 48, 48);
+    color: white;
+    border-radius: 50%;
+    padding:4px 8px;
+    font-size: 15px;
+    font-weight: bold;
+   
+}
+@media screen and (min-width: 576px){
+    .numero_carrito{
+        position:absolute;
+        top: 2%;
+        right: 2%;
+        background-color: rgb(132, 48, 48);
+        color: white;
+        border-radius: 50%;
+        padding:4px 8px;
+        font-size: 20px;
+        font-weight: bold;
+    } 
+}
+@media screen and (min-width: 992px){
+    .numero_carrito{
+        position:absolute;
+        top: 2%;
+        right: 3%;
+        background-color: rgb(132, 48, 48);
+        color: white;
+        border-radius: 50%;
+        padding:4px 8px;
+        font-size: 20px;
+        font-weight: bold;
+    } 
+
+}
+@media screen and (min-width:1200px){
+    .numero_carrito{
+        position:absolute;
+        top: 2%;
+        right: 3.5%;
+        background-color: rgb(132, 48, 48);
+        color: white;
+        border-radius: 50%;
+        padding:4px 8px;
+        font-size: 26px;
+        font-weight: bold;
+    } 
+}
+
+/* ----------------------------------------------- */
+/* MENU TOOGLE                                        */
+/* ----------------------------------------------- */
+/* MOBILE FIRST */
+
+.menu-toogle{
+    display: block;
+    background-color: #FF5757;
+    flex: 0 0 3rem; /*  0 0 3rem no crecerá, no se encogerá, y tendrá un tamaño base de 3rem*/
+    position: relative;
+    cursor:pointer;
+    &__label { /* .menu-toogle__label */
+        display: block;
+        background-color: #FF5757;
+        height: 100%;
+    }
+    &__top-bread,
+    &__meat,
+    &__bottom-bread{
+        display: block;
+        background-color: white;
+        height: .3rem;
+        position:absolute;
+        left: 0rem;
+        right: 0rem;
+    }
+    &__top-bread{
+        top:1rem;
+    }
+    &__meat { /*Centrar sin usar flexbox */
+        top:50%; /*Se centre al 50% del elemento (vertical)*/
+        margin-top: -0.2rem; /*al left le resto la mitad lo que mide */
+    }
+    &__bottom-bread{
+        bottom: 1rem;
+    }
+
+        /* DESKTOP ->  max 1200px  */
+    @media screen and (min-width: 1200px) {
+        & { /* .menu-toogle */
+            display: none;
+        }
+    }
+}

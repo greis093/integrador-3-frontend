@@ -1,0 +1,138 @@
+
+    .imagen_tabla{
+        width:50px;
+        &:hover{
+            width: 60px;
+        }
+    }
+    .boton{
+        
+        &__ver{
+            background-color: rgb(28, 179, 28);
+            width: 50px;
+            height: 30px;
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+           cursor: pointer;
+           box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    
+           &:hover {
+            font-size: 16px;
+            box-shadow: 2px 8px 10px 5px rgba(139, 235, 75, 0.793);
+        } 
+        }
+        &__editar{
+            background-color: rgb(253, 253, 11);
+            width: 50px;
+            height: 30px;
+            border-radius: 10px;
+            margin-top: 5px;
+            color: rgb(7, 7, 7);
+           cursor: pointer;
+           box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    
+           &:hover {
+            font-size: 16px;
+            box-shadow: 2px 8px 10px 5px rgba(232, 226, 65, 0.793);
+        } 
+        }
+        &__borrar{
+            background-color: red;
+            width: 50px;
+            height: 30px;
+            border-radius: 10px;
+            margin-top: 5px;
+            color: rgb(255, 255, 255);
+           cursor: pointer;
+           box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    
+           &:hover {
+            font-size: 16px;
+            box-shadow: 2px 8px 10px 5px rgba(225, 65, 65, 0.793);
+        } 
+        }
+    }
+
+@media screen and (min-width: 992px){
+    .container_tabla{
+        font-size: 20px;
+    }
+ 
+    
+    .imagen_tabla{
+        width:70px;
+        &:hover{
+            width:100px;
+        }
+    }
+    .boton{
+        
+        &__ver{
+            width: 70px;
+            height: 30px;
+            font-size: 18px;
+           &:hover {
+            font-size: 22px;
+        } 
+        }
+        &__editar{
+            width: 70px;
+            height: 30px;
+            font-size: 18px;
+           &:hover {
+            font-size: 22px;
+        } 
+        }
+        &__borrar{
+            width: 70px;
+            height: 30px;
+            font-size: 18px;
+           &:hover {
+            font-size: 22px;
+        } 
+        }
+}
+}
+@media screen and (min-width: 1200px){
+    .container_tabla{
+        font-size: 20px;
+    }
+ 
+    
+    .imagen_tabla{
+        width:70px;
+        &:hover{
+            width:100px;
+        }
+    }
+    .boton{
+        
+        &__ver{
+            width: 70px;
+            height: 40px;
+            font-size: 18px;
+            margin-left: 10px;
+           &:hover {
+            font-size: 22px;
+        } 
+        }
+        &__editar{
+            width: 70px;
+            height: 40px;
+            font-size: 18px;
+            margin-left: 10px;
+           &:hover {
+            font-size: 22px;
+        } 
+        }
+        &__borrar{
+            width: 70px;
+            height: 40px;
+            font-size: 18px;
+            margin-left: 10px;
+           &:hover {
+            font-size: 22px;
+        } 
+        }
+}
+}

@@ -1,0 +1,71 @@
+.container_tabla{
+    max-height: 700px; // Ajusta la altura máxima de la tabla
+    overflow: auto; // Activa el scroll vertical
+    position: relative;
+    margin: 20px;
+    width: 98%;
+}
+    // Scroll personalizado
+.container_tabla::-webkit-scrollbar {
+    height: 10px;
+  }
+.container_tabla::-webkit-scrollbar-thumb {
+    background: #3ae32ee1;
+  }
+  
+.container_tabla::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .categoria_span{
+    padding: 5px;
+  }
+    .tabla-alta{  
+        width: 100%;  
+        border-collapse: collapse;
+        
+       th,td{
+        text-align: center;
+       
+        border:2px
+       }
+       th {
+        background: rgb(175, 173, 173);  
+      } 
+      td{
+        border: rgba(151, 151, 151, 0.285);
+        border-style: dashed;
+      }
+  
+   }
+   .cabecera_tabla{
+    position: sticky;
+    top: 0;
+    z-index:10; // Asegura que esté por encima del tbody
+    box-shadow: 0 2px 4px rgb(0, 0, 0); // Opcional, agrega un efecto visual
+    width: 100%; // Ocupar todo el ancho disponible
+    background-color: rgb(114, 180, 183);
+    border-width: 2px;  
+   }
+  
+
+@media screen and (min-width: 992px){
+    .tabla-alta{
+        width:100%;
+       
+        th,td{
+            border-bottom:1px  black dashed;
+            padding: 8px;
+        }
+    }
+}
+
+@media screen and (min-width:1200px){
+    .tabla-alta{
+        width:100%;
+       
+        th,td{
+            border-bottom:1px  black dashed;
+            padding: 8px;
+        }
+    }
+}

@@ -1,0 +1,180 @@
+.card {
+    margin: 0 auto; /*Centrar el div*/
+    height: auto;
+    overflow: hidden;
+    transition: transform .2s; /* ! No puede ser all */
+    cursor:pointer;
+    &:hover,
+    &:focus {
+        /* radianes 2pi, gradianes 400, decimles 360 grados, vueltas 1turn  */
+        transform: scale(1.03) skew(0deg) rotate(2deg);
+        transform-origin: bottom;
+        box-shadow: 0px 7px 8px 0px rgba(0 ,0 ,0 ,1);
+    }
+    &__article {
+        display:block;
+    }
+    &__image {
+        object-fit:fill;
+        width: 70vw;    
+    }
+    &__heading{
+        display: flex;
+        justify-content: center;
+        font-size: 5vw;
+        padding: 1.8px;
+    }
+    &__content{
+        display: block;
+        text-align: center;
+        width: 70vw;
+    }
+    &__description{
+        font-size: 5vw;
+    }
+    &:nth-child(5n + 1) {
+        background-image: linear-gradient(to top, #aaafad 0%, #60efff 100%);
+    }
+    &:nth-child(5n + 2) {
+        background-image: linear-gradient(to top, #696eff 0%, #f8accf 100%);
+    }
+    &:nth-child(5n + 3) {
+        background-image: linear-gradient(to top, #f36094 0%, #34caff 100%);
+    }
+    &:nth-child(5n + 4) {
+        background-image: linear-gradient(to top, #ff930f 0%, #fff95b 100%);
+    }
+    &:nth-child(5n + 5) {
+        background-image: linear-gradient(to top, #ef80f3 0%, #f89b29 100%);
+    }
+    &__image-container {
+        text-align: center;
+        overflow:visible;     
+        clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%); /* Estado inicial */
+    }
+    &:hover &__image-container,
+    &:focus &__image-container {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Estado final */
+    }
+
+    /* Responsive ->  max 576px */
+    @media screen and (min-width: 576px){
+        & { /* .card */
+            width: 40vw;
+            
+            &__image {
+                object-fit:cover;
+                width: 40vw;
+                height: 30vw;
+               } 
+    }
+    &__heading{
+        display: flex;
+        justify-content: center;
+        font-size: 4.5vw;
+    }
+    &__content{
+        display: block;
+        text-align: center;
+        width: 40vw;
+    }
+    &__description{
+        font-size: 3.3vw;
+    }
+    }
+   
+    /* Responsive ->  992px */
+
+    @media screen and (min-width: 992px) {
+        & { /* .card */
+            width: 30vw;
+            height: 70vw;
+            &__image {
+                object-fit:cover;
+                width: 30vw;
+                height: 30vw;
+               }
+            &__heading{
+                display: flex;
+                justify-content: center;
+                font-size: 3vw;
+            }
+            &__content{
+                display: block;
+                text-align: center;
+                width: 30vw;
+            }
+            &__description{
+                font-size: 3.3vw;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1200px){
+        & { /* .card */
+            width: 18vw;
+            height: auto;
+            &__image {
+                object-fit:cover;
+                width: 18vw;
+               }
+
+            &__heading{
+                display: flex;
+                justify-content: center;
+                font-size: 1.6vw;
+            }
+            &__content{
+                display: block;
+                text-align: center;
+                width: 18vw;
+            }
+            &__description{
+                font-size: 1.5vw;
+            }
+        }
+    }
+    
+}
+.lomoney-processed{
+                padding: 14px;
+}
+
+.botones-card{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px 10px 15px;
+    &__detalle{
+            font-size: 20px;
+            padding: 8px;
+            width: 100px;
+            border-radius: 10px;
+            background-color: #60efff;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+            &:hover {
+             font-size: 17px;
+             box-shadow: 2px 8px 10px 5px rgba(75, 203, 194, 0.793);
+    }
+}
+    &__compra{
+        font-size: 20px;
+        padding: 8px;
+        width: 100px;
+        border-radius: 10px;
+        background-color: #45d438;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+            &:hover {
+             font-size: 17px;
+             box-shadow: 2px 8px 10px 5px rgba(75, 203, 194, 0.793);
+    }
+}
+&__comprado{
+    font-size: 20px;
+        padding: 8px;
+        width: 100px;
+        border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.62);
+}
+}

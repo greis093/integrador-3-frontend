@@ -1,0 +1,124 @@
+/* ----------------------------------------------- */
+/* FOOTER                                         */
+/* ----------------------------------------------- */
+/* MOBILE FIRST */
+.footer{
+    padding: 4px 0 4px 0px ;
+    color: white;
+
+    &__Title{
+        font-size: 7vw;
+        padding: 6px 0 6px 0px ;
+    }
+
+    &__Content{
+        font-size: 6vw;
+        padding: 5px 10px 10px 10px ;
+    }
+
+    &__Social{
+        font-size: 6vw;
+        padding: 5px 10px 10px 10px ;
+    }
+    &__contenedor-tarjetas-mobil{
+        font-size: 10vw;
+        padding: 10px; 
+    }
+
+    &__StoreName{
+        display: block;
+        color: white;
+        font-size: 100%;
+        padding: 5px; 
+        text-decoration: none;
+    }
+        /* MEDIUM FIRST */
+        @media screen and (min-width: 576px){
+            &__Title{
+                font-size: 4vw;
+                padding: 6px 0 6px 0px ;
+            }
+            &__Content{
+                font-size: 3vw;
+                padding: 5px 0 6px 0px ;
+            }
+            &__Social{
+                font-size: 6vw;
+                padding: 5px 10px 10px 10px ;
+            }
+            &__contenedor-tarjetas-mobil{
+                font-size: 10vw;
+                padding: 10px; 
+            }
+        
+            &__StoreName{
+                display: block;
+                color: white;
+                font-size: 4vw;
+                padding: 5px; 
+                text-decoration: none;
+            }
+        }
+          /* TABLET */
+          @media screen and (min-width: 992px){
+            &__Title{
+                font-size: 3.5vw;
+                padding: 6px 0 6px 0px ;
+            }
+            &__Content{
+                font-size: 2.5vw;
+                padding: 5px 0 6px 0px ;
+            }
+            &__Social{
+                font-size: 4vw;
+                padding: 5px 10px 10px 10px ;
+            }
+            &__contenedor-tarjetas-mobil{
+                font-size: 5vw;
+                padding: 5px; 
+            }
+        
+            &__StoreName{
+                display: block;
+                color: white;
+                font-size: 2vw;
+                padding: 5px; 
+                text-decoration: none;
+            }
+        }
+
+        /* DESKTOP */
+        @media screen and (min-width: 1200px){
+            &__Title{
+                font-size: 2.5vw;
+                padding: 6px 0 6px 20px ;
+            }
+            &__Content{
+                font-size: 2vw;
+                padding: 5px 0 6px 20px ;
+            }
+            &__Social{
+              
+                font-size: 2.5vw;  
+            }
+            &__contenedor-tarjetas-mobil{
+                font-size: 5vw;
+                padding: 10px; 
+            }
+        
+            &__StoreName{
+                display: block;
+                color: white;
+                font-size: 2vw;
+                padding: 5px; 
+                text-decoration: none;
+            }
+        }
+   
+}
+.shopify-section--footer{
+    text-align: center; 
+    background-color: #09033e;
+    overflow: hidden;
+    display:block;
+    }

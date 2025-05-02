@@ -1,0 +1,118 @@
+.section-tienda{
+    display: flex;
+    background-color:#FFD65A;
+    overflow: hidden;
+    padding: 1px;
+    font-size: 6vw;
+    overflow-wrap: break-word;
+    justify-content: center;
+    border:white;
+    border-bottom-style: dashed;
+    border-width: 10px;
+    
+    @media screen and (min-width: 576px){
+        font-size: 5vw;
+        border-width: 18px;  
+    }
+    @media screen and (min-width: 992px){
+        font-size: 4vw; 
+        border-width: 18px; 
+    }
+    @media screen and (min-width: 1200px){
+        font-size: 3vw; 
+        border-width: 18px; 
+    }
+}
+
+.tienda-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    gap: 25px;
+    @media screen and (min-width: 992px){
+        grid-template-columns: 35% 65%; 
+        
+    }
+    @media screen and (min-width: 1200px){
+        grid-template-columns: 20% 80%; 
+        gap:0px;
+        
+    }
+}
+
+.productos-container{ 
+    /*Si lo realizo por flexbox */
+    /*display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;*/
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;  /*Espacio entre elementos*/
+
+    @media screen and (min-width: 576px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px 25px 20px 25px;  /*Espacio entre elementos*/
+        }
+    }
+
+    @media screen and (min-width: 992px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px 25px 20px 25px;  /*Espacio entre elementos*/
+        }
+    }
+
+    @media screen and (min-width: 1200px){
+        &{
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 20px 0px 30px 15px;  /*Espacio entre elementos*/
+            gap:28px;
+        }
+    }
+}
+#menu-catalogo {
+    display: none;
+
+    /* Hacer funcionar el checkbox -> Hacer funcionar el menú hamburgüesa */
+    &:checked + .nav-bar-tienda {
+        display: block;
+    }
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors */
+ 
+.section-tienda{
+    display: flex;
+    background-color:#FFD65A;
+    overflow: hidden;
+    padding: 1px;
+    font-size: 6vw;
+    overflow-wrap: break-word;
+    justify-content: center;
+    border:white;
+    border-bottom-style: dashed;
+    border-width: 10px;
+    
+    @media screen and (min-width: 576px){
+        font-size: 5vw;
+        border-width: 18px;  
+    }
+    @media screen and (min-width: 992px){
+        font-size: 4vw; 
+        border-width: 18px; 
+    }
+    @media screen and (min-width: 1200px){
+        font-size: 3vw; 
+        border-width: 18px; 
+    }
+  }
+
+}
+
+
+

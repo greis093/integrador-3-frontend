@@ -1,0 +1,137 @@
+.contenedor{
+    justify-items: center;
+    text-align: center;
+}
+.detalle-tabla{
+    margin-top: 15px;
+   justify-content: center;
+   padding: 5px;
+  
+}
+.titulo{
+    font-size: 20px;
+    background-color: rgba(128, 128, 128, 0.658);
+   border-radius: 20px;
+}
+
+.fila-tabla-resumen{
+    font-size: 15px;
+    text-align: left;
+}
+td{
+    padding: 5px;
+}
+.fila-tabla-resumen-total{
+    background-color: rgba(113, 122, 119, 0.325);
+    font-size: 18px;
+    text-align: right;
+    font-weight: 900;
+}
+.bton-vaciar{
+    background-color: red;
+    width: 90px;
+    margin: 10px;
+    height: 40px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+   cursor: pointer;
+           &:hover {
+            font-size: 16px;
+            box-shadow: 2px 8px 10px 5px rgba(225, 65, 65, 0.793);
+        } 
+}
+.bton-comprar{
+    background-color: rgb(28, 179, 28);
+                    width: 90px;
+                    margin: 10px;
+                    height: 40px;
+                    border-radius: 10px;
+                    color: rgb(255, 255, 255);
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+           &:hover {
+            font-size: 16px;
+            box-shadow: 2px 8px 10px 5px rgba(139, 235, 75, 0.793);
+        } 
+} 
+@media screen and (min-width: 576px){
+    .titulo{
+        font-size: 20px;
+        background-color: rgba(128, 128, 128, 0.658);
+       border-radius: 20px;
+    }
+    
+    .fila-tabla-resumen{
+        font-size: 16px;
+    }
+    td{
+        padding: 5px;
+    }
+    .fila-tabla-resumen-total{
+        background-color: rgba(113, 122, 119, 0.325);
+        font-size: 20px;
+        text-align: right;
+        font-weight: 900;
+    }
+}
+@media screen and (min-width: 992px){
+    .titulo{
+        font-size: 25px;
+        background-color: rgba(128, 128, 128, 0.658);
+       border-radius: 20px;
+    }
+    
+    .fila-tabla-resumen{
+        font-size: 20px;
+    }
+    td{
+        padding: 5px;
+    }
+
+    .fila-tabla-resumen-total{
+        background-color: rgba(113, 122, 119, 0.325);
+        font-size: 22px;
+        text-align: right;
+        font-weight: 900;
+    }
+}
+@media screen and (min-width: 1200px){
+    .titulo{
+        font-size: 30px;
+        background-color: rgba(128, 128, 128, 0.658);
+       border-radius: 20px;
+    }
+    
+    .fila-tabla-resumen{
+        font-size: 25px;
+    }
+    td{
+        padding: 5px;
+    }
+
+    .fila-tabla-resumen-total{
+        background-color: rgba(113, 122, 119, 0.325);
+        font-size: 25px;
+        text-align: right;
+        font-weight: 900;
+    }
+    .bton-vaciar{
+        width: 160px;
+        margin: 60px;
+        height: 60px;
+        font-size: 20px;
+               &:hover {
+                font-size: 16px;
+            } 
+    }
+    .bton-comprar{   
+        width: 160px;
+        margin:60px;
+        height: 60px;
+        font-size: 20px;
+               &:hover {
+                font-size: 16px;
+            } 
+    } 
+}

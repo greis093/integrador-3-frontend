@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   // border: 1px solid #000;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Bungee+Inline&family=Bungee+Outline&family=Bungee+Spice&family=Chango&family=Comfortaa:wght@300..700&family=Dongle&family=DynaPuff:wght@400..700&family=Faster+One&family=Ga+Maamli&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Original+Surfer&family=Racing+Sans+One&family=Rampart+One&family=Rubik+Mono+One&family=Silkscreen:wght@400;700&display=swap');
+
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 100%; // default navegadores 16px
+}
+span{
+    white-space: nowrap;
+}
+
+bdi{
+    text-decoration: line-through;
+
+}
+
+.description,.values{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+ p,form{
+    font-family: 'Times New Roman', Times, serif;
+ }
+ 
+

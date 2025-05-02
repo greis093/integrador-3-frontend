@@ -1,0 +1,182 @@
+.gallery-container-mobil{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.gallery-container {
+    display:none;
+  }
+  .image-wrapper {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover; 
+        object-position:top;
+        transition: opacity 0.5s ease-in-out;
+      }
+  }
+  .shop-button {
+    position: absolute;
+    top:400px;
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  
+    &:hover {
+      background-color: #d94d38;
+    }
+  }
+  
+  .dots {
+    position: absolute;
+    top:450px;
+    display: flex;
+    gap: 8px;
+  
+  
+    .dot {
+      width: 15px;
+      height: 15px;
+      background-color: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+      
+      &.active {
+        background-color: #ff5733;
+      }
+    }
+  }
+  @media screen and (min-width: 576px){
+    .gallery-container-mobil{
+      display: none;
+    }
+    .gallery-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+    .image-wrapper {
+      height: 400px;
+      img {
+          width: 100%;
+          height: 400px;
+  
+          object-position: left;
+        }
+    }
+    .shop-button {
+      top:310px;
+      padding: 12px 18px;
+      font-size: 18px;
+      &:hover {
+        background-color: #d94d38;
+      }
+    }
+    
+    .dots {
+      top:370px;
+      gap: 8px;
+    
+      .dot {
+        width: 16px;
+        height: 16px;
+        &.active {
+          background-color: #ff5733;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 992px){
+    .gallery-container-mobil{
+      display: none;
+    }
+    .gallery-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+    .image-wrapper {
+      height: 500px;
+      img {
+          width: 100%;
+          height: 500px;
+          object-position: left;
+        }
+    }
+    .shop-button {
+      top:400px;
+      padding: 10px 15px;
+      font-size: 18px;
+      &:hover {
+        background-color: #d94d38;
+      }
+    }
+    
+    .dots {
+      top:470px;
+      gap: 8px;
+    
+      .dot {
+        width: 16px;
+        height: 16px;
+        &.active {
+          background-color: #ff5733;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1200px){
+    .gallery-container-mobil{
+      display: none;
+    }
+    .gallery-container {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+    .image-wrapper {
+      width: 100%;
+      height: 800px;
+      img {
+          width: 100%;
+          height: 800px;
+          object-position: left;
+        }
+    }
+    .shop-button {
+      top:600px;
+      padding: 20px 30px;
+      font-size: 26px;
+      &:hover {
+        background-color: #d94d38;
+      }
+    }
+    
+    .dots {
+      top:700px; 
+    
+      .dot {
+        width: 20px;
+        height: 20px;
+        &.active {
+          background-color: #ff5733;
+        }
+      }
+    }
+  }

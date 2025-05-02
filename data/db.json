@@ -1,0 +1,279 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Caja de 6 rosas premium",
+      "stock": "4",
+      "foto": "/public/imgs/caja_6_rosas_premium.webp",
+      "precio": "120",
+      "precio_antiguo": "400",
+      "detalles": "Caja con 6 rosas + tarjeta con dedicatoria",
+      "categoria": [
+        "box",
+        "love"
+      ],
+      "love": true,
+      "box": true,
+      "bouquet": false,
+      "graduacion": false,
+      "envio": false
+    },
+    {
+      "id": "2",
+      "nombre": "Ramo de tulipanes premium",
+      "stock": 4,
+      "foto": "/public/imgs/tulipanes_colores_premium.webp",
+      "precio": "69",
+      "precio_antiguo": "79",
+      "detalles": "Ramo de 3 Tulipanes + tarjeta con dedicatoria.",
+      "categoria": [
+        "love",
+        "bouquet"
+      ],
+      "bouquet": true,
+      "box": false,
+      "love": true,
+      "graduacion": false
+    },
+    {
+      "id": "3",
+      "nombre": "Ramo de Girasoles",
+      "stock": 6,
+      "foto": "/public/imgs/ramos-girasoles.webp",
+      "precio": "159",
+      "precio_antiguo": "179",
+      "detalles": "Ramo de 10 girasoles + tarjeta con dedicatoria.",
+      "categoria": [
+        "love",
+        "bouquet",
+        "box"
+      ],
+      "bouquet": true,
+      "box": true,
+      "love": true,
+      "graduacion": false
+    },
+    {
+      "id": "4",
+      "nombre": "Ramo de tulipanes multicolor Premium",
+      "stock": 3,
+      "foto": "/public/imgs/ramo_10_tulipanes.webp",
+      "precio": "139",
+      "precio_antiguo": "159",
+      "detalles": "Ramo de 10 Tulipanes + tarjeta con dedicatoria.",
+      "categoria": [
+        "love",
+        "bouquet"
+      ],
+      "bouquet": true,
+      "box": false,
+      "love": true,
+      "graduacion": false
+    },
+    {
+      "id": "5",
+      "nombre": "Box Graduación Premium",
+      "stock": 7,
+      "foto": "/public/imgs/regalo-floral-de-graduacion.webp",
+      "precio": "229",
+      "precio_antiguo": "249",
+      "detalles": "Esta acompañado de un adorable oso de peluche + topper 'Happy San Valentin.",
+      "categoria": [
+        "love",
+        "bouquet"
+      ],
+      "bouquet": true,
+      "box": false,
+      "love": true,
+      "graduacion": false
+    },
+    {
+      "id": "6",
+      "nombre": "Box San Valentin",
+      "stock": 20,
+      "foto": "/public/imgs/arreglo_floral_amor.webp",
+      "precio": "229",
+      "precio_antiguo": "249",
+      "detalles": "Ramo de 12 Rosas + tarjeta con dedicatoria acompañado de un adorable oso de peluche + topper 'Happy San Valentin.",
+      "categoria": [
+        "box",
+        "love"
+      ],
+      "bouquet": false,
+      "box": true,
+      "love": true,
+      "graduacion": false
+    },
+    {
+      "id": "7",
+      "nombre": "Ramo Premium Love",
+      "stock": 3,
+      "foto": "/public/imgs/ramo_premium_love.webp",
+      "descripcion": "Construidos con una combinación de caqui  y abeto ",
+      "precio": "89",
+      "precio_antiguo": "129",
+      "detalles": "Ramo con 12 rosas y follaje verde + tarjeta con dedicatoria.",
+      "categoria": [
+        "bouquet",
+        "love"
+      ],
+      "bouquet": true,
+      "box": false,
+      "love": true,
+      "graduacion": false
+    },
+    {
+      "id": "8",
+      "nombre": "Box Chocofresas Premium",
+      "stock": 2,
+      "foto": "/public/imgs/caja_de_fresas_con_chocolate_y_licor.webp",
+      "precio": "189",
+      "precio_antiguo": "229",
+      "detalles": "Box de 10 rosas + 20 fresas con toppings acompañado de un Riccadonna +  en base de lata resistente y duradera.",
+      "categoria": [
+        "love",
+        "bouquet"
+      ],
+      "bouquet": true,
+      "box": false,
+      "love": true,
+      "graduacion": false
+    }
+  ],
+  "carritos": [
+    {
+      "id": "f0b4",
+      "createAt": 1742918319413,
+      "carrito": [
+        {
+          "id": "1",
+          "nombre": "Caja de 6 rosas premium",
+          "stock": "4",
+          "foto": "/public/imgs/caja_6_rosas_premium.webp",
+          "precio": "120",
+          "precio_antiguo": "400",
+          "detalles": "Caja con 6 rosas + tarjeta con dedicatoria",
+          "categoria": [
+            "bouquet",
+            "graduacion"
+          ],
+          "love": false,
+          "box": false,
+          "bouquet": true,
+          "graduacion": true,
+          "envio": false,
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "id": "dd58",
+      "createAt": 1743472222877,
+      "carrito": [
+        {
+          "id": "3",
+          "nombre": "Ramo de Girasoles",
+          "stock": 6,
+          "foto": "/public/imgs/ramos-girasoles.webp",
+          "precio": "159",
+          "precio_antiguo": "179",
+          "detalles": "Ramo de 10 girasoles + tarjeta con dedicatoria.",
+          "categoria": [
+            "love",
+            "bouquet",
+            "box"
+          ],
+          "bouquet": true,
+          "box": true,
+          "love": true,
+          "graduacion": false,
+          "cantidad": 1
+        },
+        {
+          "id": "2",
+          "nombre": "Ramo de tulipanes premium",
+          "stock": 4,
+          "foto": "/public/imgs/tulipanes_colores_premium.webp",
+          "precio": "69",
+          "precio_antiguo": "79",
+          "detalles": "Ramo de 3 Tulipanes + tarjeta con dedicatoria.",
+          "categoria": [
+            "love",
+            "bouquet"
+          ],
+          "bouquet": true,
+          "box": false,
+          "love": true,
+          "graduacion": false,
+          "cantidad": 1
+        },
+        {
+          "id": "1",
+          "nombre": "Caja de 6 rosas premium",
+          "stock": "4",
+          "foto": "/public/imgs/caja_6_rosas_premium.webp",
+          "precio": "120",
+          "precio_antiguo": "400",
+          "detalles": "Caja con 6 rosas + tarjeta con dedicatoria",
+          "categoria": [
+            "box",
+            "love"
+          ],
+          "love": true,
+          "box": true,
+          "bouquet": false,
+          "graduacion": false,
+          "envio": false,
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "id": "b13f",
+      "createAt": 1743472684729,
+      "carrito": [
+        {
+          "id": "2",
+          "nombre": "Ramo de tulipanes premium",
+          "stock": 4,
+          "foto": "/public/imgs/tulipanes_colores_premium.webp",
+          "precio": "69",
+          "precio_antiguo": "79",
+          "detalles": "Ramo de 3 Tulipanes + tarjeta con dedicatoria.",
+          "categoria": [
+            "love",
+            "bouquet"
+          ],
+          "bouquet": true,
+          "box": false,
+          "love": true,
+          "graduacion": false,
+          "cantidad": 1
+        }
+      ]
+    }
+  ],
+  "mensajes": [
+    {
+      "id": "ccd5",
+      "nombre_completo": "GGFGHG",
+      "celular": "",
+      "correo": "",
+      "mensaje": ""
+    },
+    {
+      "id": "ae64",
+      "nombre_completo": "nicolas agreda",
+      "celular": "958224",
+      "correo": "yirley093@gmail.com",
+      "mensaje": "mas info"
+    },
+    {
+      "id": "8ce0",
+      "nombre_completo": "Greicy agreda",
+      "celular": "977806552",
+      "correo": "yirley093@gmail.com",
+      "mensaje": "hola deseo un servicio corporativo"
+    }
+  ]
+}
