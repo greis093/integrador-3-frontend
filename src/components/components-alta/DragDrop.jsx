@@ -31,7 +31,7 @@ const DragDrop=({setFoto, srcImagenBack, setSrcImagenBack})=>{
      const uploadFile= async(file)=>{
         console.log('Llego a upload', file)
         const url= import.meta.env.VITE_BACKEND_UPLOAD
-        console.log("VITE_BACKEND_UPLOAD: ",url )
+        console.log("VITE_BACKEND_UPLOAD aqui: ",url )
         try {
             const formData = new FormData()
             //           key, value
