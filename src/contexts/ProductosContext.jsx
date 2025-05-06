@@ -7,8 +7,10 @@ import Swal from "sweetalert2";
 const ProductosContext= createContext()
 
 //! 2.Armamos el Provider
-const ProductosProvider = ({ children}) =>{
+const ProductosProvider = ({children}) =>{
     const url= import.meta.env.VITE_BACKEND_PRODUCTOS
+    console.log("url:",url)
+
     const [productos, setProductos] = useState(null)
     const [productosFiltrados, setProductosFiltrados] = useState([])
     const [productoAEditar,setProductoAEditar]= useState(null)
@@ -16,9 +18,14 @@ const ProductosProvider = ({ children}) =>{
         getAllProductos()
     },[])
 
+
+    
     const getAllProductos = async ()=>{
         try {
+            //console.log("url:",url)
             const prods = await peticionesHttp(url, {})
+            //console.log("prods:",prods)
+
             setProductos(prods)
         } catch (error) {
             console.error('[getAllProductos]',error)
@@ -57,13 +64,15 @@ const ProductosProvider = ({ children}) =>{
             const nuevoEstadoProductos= productos.map(prod =>
                 prod.id === productoEditado.id ? productoEditado : prod)
                 setProductos(nuevoEstadoProductos)
+               getAllProductos()
+
         } catch (error) {
             console.error('[actualizarProductoContext]',error)
         }
     }
     const eliminarProductoContext =async(id) =>{
             try {
-                const urlEliminacion = url + id
+                const urlEliminacion = url + id  
                 const options={
                     method: 'DELETE'
                 }
@@ -76,7 +85,8 @@ const ProductosProvider = ({ children}) =>{
             }
     }
     const filtrarProductosATienda=async(filtroProducto)=>{
-        const prodsFiltrados = productos.filter(producto => {
+       // console.log('aqui llego productos filtrados', filtroProducto)
+        const prodsFiltrados = await productos.filter(producto => {
                 
             if(filtroProducto.love && producto.categoria.indexOf("love") !=-1){
                 return producto
@@ -93,13 +103,14 @@ const ProductosProvider = ({ children}) =>{
         }
           );
      setProductosFiltrados(prodsFiltrados) 
+     //console.log('productos filtrados',prodsFiltrados)
     }
 
     const botonFiltrarNavbar= (palabras)=>{
         const palabrasSeparadas = palabras.toLowerCase().split(/\s+/);
-        console.log("ffxx",productos)
+        //console.log("ffxx",productos)
         if (!productos) {
-            console.warn("No hay productos disponibles para filtrar");
+           // console.warn("No hay productos disponibles para filtrar");
             return;
         }
         const filtro =productos.filter(producto =>
@@ -110,6 +121,7 @@ const ProductosProvider = ({ children}) =>{
             // Verifica si el nombre incluye alguna palabra clave
             palabrasSeparadas.some(f => producto.detalles.toLowerCase().includes(f.toLowerCase()))
         );
+        console.log('filtro producto',filtro)
         if (filtro.length===0){
             console.log("filtro esta entrando aqui",filtro)
               Swal.fire({
@@ -120,7 +132,7 @@ const ProductosProvider = ({ children}) =>{
         }
             
         setProductosFiltrados(filtro);
-        console.log(filtro)
+        
     }
 
     const data={

@@ -5,6 +5,7 @@ import ProductosContext from "../../contexts/ProductosContext";
 
 const Tabla = () => {
     const { productos } = useContext(ProductosContext);
+    //console.log(productos)
   return (
   
        <div className="container_tabla" style={{overflow:"scroll"}}>

@@ -2,12 +2,17 @@ import './Formulario.scss'
 import { useContext, useEffect, useState } from "react"
 import ProductosContext from "../../contexts/ProductosContext"
 import Swal from "sweetalert2";
+import DragDrop from './DragDrop';
+
 
 const Formulario = () => {
     const {crearProdutoContext, 
-        productoAEditar, 
+        productoAEditar,  
         setProductoAEditar,
         actualizarProductoContext} = useContext(ProductosContext)
+        //console.log('produco a editar',productoAEditar)
+
+
   const formInicial={
       id:null,
       nombre:'',
@@ -23,12 +28,23 @@ const Formulario = () => {
       foto:'',
       envio:false
   }
-  useEffect(()=>(
-    productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
-  ),[productoAEditar])
+  useEffect(()=>{
+    if (productoAEditar){
+      setForm(productoAEditar)
+        setFoto({foto: productoAEditar.foto})
+        setSrcImagenBack(productoAEditar.foto)
+        
+    }else{
+      setForm(formInicial)
+    }
+  }
+  ,[productoAEditar])
+  
       const [form, setForm] = useState(formInicial)
-
-
+      var placeHolderImagen='http://localhost:8080/uploads/placeholder.jpg'
+    
+       const[foto,setFoto]=useState({foto:placeHolderImagen})
+      const[srcImagenBack,setSrcImagenBack]=useState(placeHolderImagen)
       const handleSubmit =(e)=>{
         e.preventDefault()
         if (!form.nombre || !form.precio || !form.precio_antiguo || !form.detalles || !form.stock ) {
@@ -48,8 +64,9 @@ const Formulario = () => {
         return;
         }
         if (form.id === null){
-          
-            crearProdutoContext(form)
+           const productoNuevoConImagen={...form,...foto}
+
+            crearProdutoContext(productoNuevoConImagen)
             Swal.fire({
               title: "Creado!",
               text: "El producto se creo",
@@ -57,15 +74,25 @@ const Formulario = () => {
             });
             
         } else{
-            actualizarProductoContext(form)
+          const productoNuevoConImagen={...form,...foto}
+          console.log('lafoto',foto)
+          productoNuevoConImagen.foto = foto.foto
+          console.log('productonuevoimagen',productoNuevoConImagen)
+          
             Swal.fire({
                       title: "Actualizado!",
                       text: "El producto se actualizo",
                        icon: "success"
-                    });
+                    })
+                    actualizarProductoContext(productoNuevoConImagen) 
+                    
         }
         
-        setProductoAEditar(formInicial)   
+        setForm(formInicial)
+        setProductoAEditar(null)
+        setFoto({foto:placeHolderImagen})
+        setSrcImagenBack(placeHolderImagen) 
+          
       }
 
       const handleChange =(e) =>{
@@ -87,7 +114,10 @@ const Formulario = () => {
       }
 
       const handleReset =()=>{
+        setForm(formInicial)
           setProductoAEditar(null)
+          setFoto({foto:placeHolderImagen})
+          setSrcImagenBack(placeHolderImagen)
       }
   return (
     <>
@@ -163,14 +193,14 @@ const Formulario = () => {
             value={form.detalles} 
             onChange={handleChange} required/>
         </div >
-        <div className="formulario__fila">
-            <label className='formulario__datos' htmlFor="lbl-foto">Foto</label>
-            <input className='formulario__input' type="text" 
-            id="lbl-foto" 
-            name="foto" 
-            value={form.foto} 
-            onChange={handleChange} />
-        </div>
+      
+
+        <div>
+          <DragDrop setFoto={setFoto} 
+                    srcImagenBack={srcImagenBack}
+                    setSrcImagenBack={setSrcImagenBack}/>
+                  </div>
+
         <div className="formulario__fila">
             <label className='formulario__datos' htmlFor="lbl-envio">Envio</label>
             <input className='formulario__check' type="checkbox" 

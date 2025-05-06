@@ -16,7 +16,7 @@ const ItemFiltro = () => {
 
         filtro[name] =  checked 
               setFiltro(filtro); 
-              console.log("despues", filtro)
+             // console.log("despues", filtro)
     }
 
     //const filtrarProductosATienda 
