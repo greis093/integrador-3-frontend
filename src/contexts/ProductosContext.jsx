@@ -9,7 +9,7 @@ const ProductosContext= createContext()
 //! 2.Armamos el Provider
 const ProductosProvider = ({children}) =>{
     const url= import.meta.env.VITE_BACKEND_PRODUCTOS
-    console.log("url:",url)
+    //console.log("url:",url)
 
     const [productos, setProductos] = useState(null)
     const [productosFiltrados, setProductosFiltrados] = useState([])
@@ -120,9 +120,9 @@ const ProductosProvider = ({children}) =>{
             // Verifica si el nombre incluye alguna palabra clave
             palabrasSeparadas.some(f => producto.detalles.toLowerCase().includes(f.toLowerCase()))
         );
-        console.log('filtro producto',filtro)
+        //console.log('filtro producto',filtro)
         if (filtro.length===0){
-            console.log("filtro esta entrando aqui",filtro)
+            //console.log("filtro esta entrando aqui",filtro)
               Swal.fire({
                       title: "No se encontro producto!",
                       text: "Te mostramos nuestro catálogo",

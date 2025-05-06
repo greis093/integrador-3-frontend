@@ -65,7 +65,7 @@ const Formulario = () => {
         }
         if (form.id === null){
            const productoNuevoConImagen={...form,...foto}
-            console.log("productoNuevoConImagen", productoNuevoConImagen)
+            //console.log("productoNuevoConImagen", productoNuevoConImagen)
             crearProdutoContext(productoNuevoConImagen)
             Swal.fire({
               title: "Creado!",
@@ -75,9 +75,9 @@ const Formulario = () => {
             
         } else{
           const productoNuevoConImagen={...form,...foto}
-          console.log('lafoto',foto)
+          //console.log('lafoto',foto)
           productoNuevoConImagen.foto = foto.foto
-          console.log('productonuevoimagen',productoNuevoConImagen)
+          //console.log('productonuevoimagen',productoNuevoConImagen)
           
             Swal.fire({
                       title: "Actualizado!",

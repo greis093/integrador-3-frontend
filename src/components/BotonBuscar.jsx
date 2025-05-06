@@ -18,7 +18,7 @@ const BotonBuscar = () => {
 
 const handleSubmit = (e) => {
   e.preventDefault(); // Evita el comportamiento por defecto del formulario
-  console.log("Valor buscado:", buscar.filtro);
+  //console.log("Valor buscado:", buscar.filtro);
   botonFiltrarNavbar(buscar.filtro)
   navigate(`/tienda`)
 

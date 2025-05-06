@@ -25,17 +25,17 @@ const CarritoProvider = ({children}) => {
   }
   const agregarProductoAlCarritoContext= (producto) => {
     setcantCarrito(producto)
-    console.log('ya estoy en el agregar del contexto', producto)
+    //console.log('ya estoy en el agregar del contexto', producto)
     // Averiguo si esta o no esta en el carrito
     if(!elProductoEstaEnElCarrito(producto)){
-        console.log('No esta en el carrito')
+        //console.log('No esta en el carrito')
         producto.cantidad = 1
         agregarAlCarrito(producto) //Agrega el producto en el localStorage y modifica el estado del app
     } else{
       const productoDelCarrito = obtenerProductoDeCarrito(producto)
-        console.log('Ya esta en el carrito')
+       // console.log('Ya esta en el carrito')
         if(producto.cantidad === parseFloat(producto.stock)){
-          console.log("no puede")
+          //console.log("no puede")
           return;
         } else{
           productoDelCarrito.cantidad++
@@ -54,7 +54,7 @@ const CarritoProvider = ({children}) => {
         const idProd= producto.id
             eliminarDelCarrito(idProd) //Si el carrito se queda en cero        
       } else{       
-          console.log('Ya esta en el carrito')
+          //console.log('Ya esta en el carrito')
           const productoDelCarrito = obtenerProductoDeCarrito(producto)
           productoDelCarrito.cantidad--
           setcantCarrito(productoDelCarrito.cantidad)

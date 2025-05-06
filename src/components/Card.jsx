@@ -15,7 +15,7 @@ const Card = ({producto}) => {
   }, [producto, elProductoEstaEnElCarrito]);
   
   const handleVer = (id) => {
-    console.log(id)
+    //console.log(id)
     navigate(`/productocarrito/detalle/${id}`)
   }
  

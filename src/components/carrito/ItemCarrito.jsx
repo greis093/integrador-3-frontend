@@ -15,7 +15,7 @@ const ItemCarrito = ({producto}) => {
      } = useContext(CarritoContext)
      const navigate = useNavigate()
     const handleEliminar = (id) => {
-        console.log('Eliminando el producto...', id)
+        //console.log('Eliminando el producto...', id)
         //lógica de Sweet Alert
             Swal.fire({
               title: "¿Estás seguro?",
@@ -52,7 +52,7 @@ const ItemCarrito = ({producto}) => {
         
     }
     const handleVer = (id) => {
-      console.log(id)
+      //console.log(id)
       navigate(`/productocarrito/detalle/${id}`)
     } 
     const subtotal= subtotalPrecioItemCarritoContext(producto) 

@@ -29,22 +29,22 @@ const DragDrop=({setFoto, srcImagenBack, setSrcImagenBack})=>{
      }
        
      const uploadFile= async(file)=>{
-        console.log('Llego a upload', file)
+        //console.log('Llego a upload', file)
         const url= import.meta.env.VITE_BACKEND_UPLOAD
-        console.log("VITE_BACKEND_UPLOAD aqui: ",url )
+        //console.log("VITE_BACKEND_UPLOAD aqui: ",url )
         try {
             const formData = new FormData()
             //           key, value
             formData.append('imagen',file)
-        console.log("formData: ",formData )
-        console.log("file: ",file )
+        //console.log("formData: ",formData )
+        //console.log("file: ",file )
 
             const options={
                 method:'POST',
                 body: formData
             }
             const imagenUp = await peticionesHttp(url,options)
-            console.log("imagenUp: ",imagenUp)
+            //console.log("imagenUp: ",imagenUp)
 
             imagenUp.foto=imagenUp.foto.replace(/\s+/g, "")           
             
