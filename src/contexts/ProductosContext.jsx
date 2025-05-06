@@ -59,7 +59,6 @@ const ProductosProvider = ({children}) =>{
             }
             const urlActualizar = url + productoAEditar.id
             const productoEditado= await peticionesHttp (urlActualizar, options)
-            console.log(productoEditado)
 
             const nuevoEstadoProductos= productos.map(prod =>
                 prod.id === productoEditado.id ? productoEditado : prod)

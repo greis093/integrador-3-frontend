@@ -65,7 +65,7 @@ const Formulario = () => {
         }
         if (form.id === null){
            const productoNuevoConImagen={...form,...foto}
-
+            console.log("productoNuevoConImagen", productoNuevoConImagen)
             crearProdutoContext(productoNuevoConImagen)
             Swal.fire({
               title: "Creado!",

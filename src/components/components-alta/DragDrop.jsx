@@ -1,8 +1,6 @@
 import { peticionesHttp } from '../../helpers/peticiones-http'
 import './DragDrop.scss'
 
-var ultimaImage = ""
-
 const DragDrop=({setFoto, srcImagenBack, setSrcImagenBack})=>{
     //! cancelando comportamiento por defecto del navegador
     const arrayEventosDragDrop=['dragenter','dragleave','dragover','drop']
@@ -43,11 +41,10 @@ const DragDrop=({setFoto, srcImagenBack, setSrcImagenBack})=>{
             }
             var imagenUp= await peticionesHttp(url,options)
 
-            imagenUp.foto=imagenUp.foto.replace(/\s+/g, "")
-            // caso primea imagen subida            
+            imagenUp.foto=imagenUp.foto.replace(/\s+/g, "")           
             
             
-            setFoto(ultimaImage)
+            setFoto(imagenUp)
         } catch (error) {
             console.error('[uploadFile]', error)
         }
